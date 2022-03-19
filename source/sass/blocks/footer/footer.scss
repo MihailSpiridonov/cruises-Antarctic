@@ -1,0 +1,36 @@
+.footer {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  min-height: 138px;
+  padding: 0;
+  padding-bottom: 50px;
+  margin: 0;
+  background: $text-dark-blue;
+
+  @media (max-width: $tablet-width) {
+    min-height: 120px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 283px;
+    padding-bottom: 40px;
+    //padding-top: 40px;
+  }
+}
+
+.footer .wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  @media (max-width: $tablet-width) {
+    gap: 26px;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}

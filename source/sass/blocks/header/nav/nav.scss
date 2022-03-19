@@ -1,0 +1,129 @@
+.nav {
+  padding: 0;
+  margin: 0;
+  width: 80%;
+
+  @media (max-width: $tablet-width) {
+    width: 85%;
+  }
+}
+
+.nav--nojs {
+  @media (max-width: $mobile-width) {
+    display: block;
+    z-index: 1;
+    width: 89vw;
+    min-height: 568px;
+    margin: 0;
+    margin-left: auto;
+    background-color: $text-white;
+  }
+}
+
+.nav--open {
+  @media (max-width: $mobile-width) {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: inline-block;
+    width: 89vw;
+    min-height: 568px;
+    margin: 0;
+    margin-left: auto;
+    background-color: $text-white;
+  }
+}
+
+.nav--close {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 33px;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  padding-bottom: 10px;
+  margin: 0;
+  list-style: none;
+
+  @media (max-width: $tablet-width) {
+    gap: 23px;
+    padding-bottom: 7px;
+  }
+}
+
+.footer .nav__list {
+  justify-content: flex-start;
+  flex-grow: 2;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    min-height: 105px;
+    padding-bottom: 0;
+  }
+}
+
+.nav--open .nav__list,
+.nav--nojs .nav__list {
+  flex-direction: column;
+  padding-top: 85px;
+  padding-left: 25px;
+}
+
+.nav__item {
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  //transition: 0.5s all;
+}
+
+.nav__item:active,
+.nav__item:active .nav__link {
+  opacity: 0.4;
+}
+
+.nav__link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $text-white;
+  align-items: center;
+
+  @media (max-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.footer .nav__link {
+  @media (max-width: $tablet-width) {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.nav--open .nav__link,
+.nav--nojs .nav__link {
+  font-size: 18px;
+  line-height: 22px;
+  color: $text-dark-blue;
+}
+
+.nav__item:hover .nav__link {
+  opacity: 0.7;
+}
+
+.nav__item:active .nav__link {
+  opacity: 0.3;
+}

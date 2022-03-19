@@ -116,6 +116,7 @@ const build = gulp.series(clean, svgo, copy, css, sprite, js);
 
 const start = gulp.series(build, syncServer);
 
+
 // Optional tasks
 //---------------------------------
 
@@ -127,9 +128,9 @@ const start = gulp.series(build, syncServer);
 
 const createWebp = () => {
   const root = '';
-  return gulp.src(`source/img/${root}**/*.{png,jpg}`)
+  return gulp.src(`source/img/content/**/*.{png,jpg}`)
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest(`source/img/${root}`));
+    .pipe(gulp.dest(`source/img/content/`));
 };
 
 const optimizeImages = () => {

@@ -1,49 +1,186 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page page--index" lang="ru">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
+    <meta name="description" content="Описание проекта" />
     <title>Круизы в Антарктику</title>
     <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
-      <link rel="preload" href="fonts/Montserrat-Regular.woff" as="font" type="font/woff" crossorigin>
-      <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin>
-      <link rel="preload" href="fonts/Montserrat-Medium.woff" as="font" type="font/woff" crossorigin>
-
-      <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="fonts/Montserrat-Bold.woff" as="font" type="font/woff" crossorigin>
-        <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="fonts/Montserrat-SemiBold.woff" as="font" type="font/woff" crossorigin>
-      <link rel="icon" href="favicon.ico">
-      <link rel="icon" href="img/svg/logo.svg" type="image/svg+xml">
+    <link rel="preload" href="fonts/Montserrat-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Montserrat-Medium.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Montserrat-Bold.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff" as="font" type="font/woff" crossorigin>
+    <link rel="icon" href="favicon/favicon.ico">
+    <link rel="icon" href="favicon/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-  
-  <!-- header start -->
-  <!--  start -->
 
-  <body>
-    <div class="wrapper">
-      <header>
-        <div class="container"></div>
-      </header>
-      <main>
-        <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+  <!-- header start -->
+
+  <body class="page__body body">
+    <header class="body__header header">
+      <a class="header__logo logo" href="#">
+        <svg class="logo__image" width="70" height="38" aria-label="Логотип с изображением гор">
+          <use xlink:href="img/sprite_auto.svg#logo"></use>
+        </svg>
+      </a>
+      <nav class="header__nav nav nav--close">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Преимущества</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Направления</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Ближайшие круизы</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__button-toggle button-toggle" tabindex="0">
+          <div class="button-toggle__wrapper">
+            <label class="button-toggle__label" for="burger-menu"></label>
+            <input class="button-toggle__input" type="checkbox" id="burger-menu">
+            <div class="button-toggle__line button-toggle__line--1"></div>
+            <div class="button-toggle__line button-toggle__line--2"></div>
+            <div class="button-toggle__line button-toggle__line--3"></div>
+            <div class="button-toggle__line button-toggle__line--4"></div>
           </div>
-        </section>
-      </main>
-      <footer>
-        <div class="container"></div>
-      </footer>
-    </div>
-    <div class="modal modal--preload" data-modal="feedback">
+      </div>
+    </header>
+
+  <!-- header end -->
+  <!-- main start -->
+  <!-- tagline start -->
+
+    <main class="body__main main">
+      <section class="tagline">
+        <div class="tagline__image">
+          <!--<picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/index/product-desctop.webp 1x, img/index/product-desctop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/index/product-tablet.webp 1x, img/index/product-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/index/product-mobile.webp 1x, img/index/product-mobile@2x.webp 2x">\
+
+            <source media="(min-width: 1440px)" srcset="img/index/product-desctop.png 1x, img/index/product-desctop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/index/product-tablet.png 1x, img/index/product-tablet@2x.png 2x">
+            <img class="basic-information__image" src="img/index/product-mobile.png" srcset="img/index/product-mobile@2x.png 2x" width="280" height="270" alt="Изображение стакана с функциональным питантием Кэт энерджи">
+          </picture>-->
+
+          <picture>
+            <!--
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/content/antarctic_mobile.webp 1x, img/content/antarctic_mobile_2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1365px)" srcset="img/content/antarctic_tablet.webp 1x, img/content/antarctic_tablet_2x.webp 2x">
+            <source type="image/webp" srcset="img/content/antarctic_desctop.webp 1x, img/content/antarctic_desctop_2x.webp 2x">
+            -->
+
+            <source media="(max-width: 767px)" srcset="img/content/antarctic_mobile.jpg 1x, img/content/antarctic_mobile_2x.jpg 2x">
+            <source media="(max-width: 1365px)" srcset="img/content/antarctic_tablet.jpg 1x, img/content/antarctic_tablet_2x.jpg 2x">
+
+            <img src="img/content/antarctic_desctop.jpg" srcset="img/content/antarctic_desctop_2x.jpg 2x" width="1366" height="650" alt="Снежные горы Антарктики">
+          </picture>
+        </div>
+        <div class="tagline__wrapper-text wrapper">
+          <h1 class="tagline__title">Круизы в Антарктику</h1>
+          <p class="tagline__text">Волшебный мир айсбергов и пингвинов</p>
+        </div>
+      </section>
+
+  <!-- tagline end -->
+
+      <section class="about wrapper">
+        <div class="about__wrapper-text">
+          <h2 class="about__title">Путешествие на край Земли</h2>
+          <p class="about__text">Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+        </div>
+        <div class="about__image">
+          <picture>
+            <!--
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/content/penguins_mobile.webp 1x, img/content/penguins_mobile_2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1365px)" srcset="img/content/penguins_tablet.webp 1x, img/content/penguins_tablet_2x.webp 2x">
+            <source type="image/webp" srcset="img/content/penguins_desctop.webp 1x, img/content/penguins_desctop_2x.webp 2x">
+            -->
+
+            <source media="(max-width: 767px)" srcset="img/content/penguins_mobile.jpg 1x, img/content/penguins_mobile_2x.jpg 2x">
+            <source media="(max-width: 1365px)" srcset="img/content/penguins_tablet.jpg 1x, img/content/penguins_tablet_2x.jpg 2x">
+
+            <img src="img/content/penguins_desctop.jpg" srcset="img/content/penguins_desctop_2x.jpg 2x" width="560" height="301" alt="Три пингвина идут по снегу">
+          </picture>
+        </div>
+      </section>
+
+      <section class="intro">
+        <div class="container">
+          <h2>Тестовая страница.</h2>
+          <p>На данной странице показан пример модальных окон.</p>
+          <p>Перед началом разработки не забудте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
+          <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
+          <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+        </div>
+      </section>
+    </main>
+
+    <!-- main end -->
+    <!-- footer start -->
+
+    <footer class="body__footer footer">
+      <div class="wrapper">
+        <a class="footer__logo logo" href="#">
+          <svg class="logo__image" width="70" height="38" fill="none" aria-label="Логотип с изображением гор">
+            <use xlink:href="img/sprite_auto.svg#logo"></use>
+          </svg>
+        </a>
+        <nav class="footer__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#">Преимущества</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Направления</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Ближайшие круизы</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__socials socials">
+          <ul class="socials_list">
+            <li class="socials_item">
+              <a class="socials_link" href="#">
+                <svg class="socials__image socials__image--facebook" width="11" height="20" fill="none" aria-label="Иконка фейсбука">
+                  <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials_item">
+              <a class="socials_link" href="#">
+                <svg class="socials__image socials__image--instagram" width="20" height="20" fill="none" aria-label="Иконка инстаграмма">
+                  <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials_item">
+              <a class="socials_link" href="#">
+                <svg class="socials__image socials__image--twitter" width="20" height="16" fill="none" aria-label="Иконка твиттера">
+                  <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!--<div class="modal modal--preload" data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
@@ -69,7 +206,7 @@
           </button>
         </div>
       </div>
-    </div>
+    </div>-->
 
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

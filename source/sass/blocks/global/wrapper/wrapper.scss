@@ -1,0 +1,16 @@
+.wrapper {
+  min-width: 1160px;
+  width: 85vw;
+  padding: 0;
+  margin: 0 auto;
+
+  @media (max-width: $tablet-width) {
+    min-width: 678px;
+    width: 88vw;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 288px;
+    width: 90vw;
+  }
+}

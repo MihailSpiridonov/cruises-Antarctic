@@ -1,0 +1,32 @@
+.header {
+  position: absolute;
+  content: "";
+  top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  min-width: 1160px;
+  width: 85vw;
+  min-height: 60px;
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet-width) {
+    top: 15px;
+    min-width: 678px;
+    width: 88vw;
+    min-height: 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    //display: block;
+    top: 0;
+    min-width: 290px;
+    width: 100vw;
+    min-height: 40px;
+  }
+}
