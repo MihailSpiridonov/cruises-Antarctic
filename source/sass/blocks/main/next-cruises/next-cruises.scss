@@ -1,0 +1,50 @@
+.next-cruises {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 120px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 103px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 60px;
+  }
+}
+
+.next-cruises__title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 48px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  color: $text-dark-blue;
+
+  @media (max-width: $tablet-width) {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 35px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.next-cruises__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0 15px;
+  margin: 0 auto;
+  line-height: 0;
+  list-style: none;
+
+  @media (max-width: $tablet-width) {
+    padding: 0 15px;
+  }
+}

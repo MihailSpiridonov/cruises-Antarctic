@@ -1,0 +1,126 @@
+.booking {
+  position: relative;
+  width: 100vw;
+  min-height: 555px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 120px;
+
+  @media (max-width: $tablet-width) {
+    min-height: 805px;
+    margin-bottom: 103px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 760px;
+    margin-bottom: 60px;
+  }
+}
+
+.booking__image {
+  width: 100%;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.booking__image img {
+  width: 100%;
+  min-height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.booking__container {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 12%;
+  display: flex;
+  justify-content: space-between;
+  width: 76%;
+  min-width: 1040px;
+  padding: 0;
+  padding-top: 50px;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet-width) {
+    left: 23%;
+    flex-direction: column;
+    width: 55%;
+    min-width: 419px;
+    padding-top: 85px;
+  }
+
+  @media (max-width: $mobile-width) {
+    align-items: center;
+    left: 4%;
+    width: 91%;
+    min-width: 290px;
+    padding-top: 60px;
+  }
+}
+
+.booking__description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 48%;
+  min-width: 493px;
+  padding: 0;
+  padding-top: 160px;
+  margin: 0;
+
+  @media (max-width: $tablet-width) {
+    gap: 8px;
+    padding-top: 0;
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    gap: 14px;
+    width: 89%;
+    min-width: 257px;
+    margin-bottom: 35px;
+  }
+}
+
+.booking__title {
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 34px;
+    line-height: 51px;
+  }
+
+  @media (max-width: $mobile-width) {
+    text-align: center;
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+
+.bookng__text {
+  width: 71%;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+
+  @media (max-width: $tablet-width) {
+    width: 78%;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

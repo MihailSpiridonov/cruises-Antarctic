@@ -1,14 +1,17 @@
 .about {
   display: flex;
   gap: 88px;
+  margin-bottom: 120px;
 
   @media (max-width: $tablet-width) {
     gap: 31px;
+    margin-bottom: 97px;
   }
 
   @media (max-width: $mobile-width) {
     flex-direction: column;
     gap: 25px;
+    margin-bottom: 65px;
   }
 }
 
