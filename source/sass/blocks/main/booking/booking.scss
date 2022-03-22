@@ -4,16 +4,16 @@
   min-height: 555px;
   padding: 0;
   margin: 0;
-  margin-bottom: 120px;
+  margin-bottom: 110px;
 
   @media (max-width: $tablet-width) {
     min-height: 805px;
-    margin-bottom: 103px;
+    margin-bottom: 90px;
   }
 
   @media (max-width: $mobile-width) {
     min-height: 760px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 }
 

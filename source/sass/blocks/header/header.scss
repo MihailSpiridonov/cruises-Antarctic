@@ -23,10 +23,24 @@
   }
 
   @media (max-width: $mobile-width) {
-    //display: block;
     top: 0;
     min-width: 290px;
     width: 100vw;
     min-height: 40px;
+  }
+}
+
+.header--nojs,
+.header--open {
+  @media (max-width: $mobile-width) {
+    position: relative;
+    top: 0;
+    background-color: #4975a3;
+  }
+}
+
+.header--open {
+  @media (max-width: $mobile-width) {
+    min-height: 0;
   }
 }

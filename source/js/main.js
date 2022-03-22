@@ -1,5 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {buttonHumburger, menuNav, openMenu} from './modules/menu-mobile/menu-mobile.js';
+import {form, formSend} from './modules/form-validation/form-validation.js';
 
 // ---------------------------------
 
@@ -11,7 +13,32 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
 
   // Modules
-  // ---------------------------------
+
+  // Form validation
+  form.addEventListener('submit', formSend);
+
+
+  // Плавный скролл по якорям из навигации
+  const anchors = document.querySelectorAll('[data-nav-link]');
+
+  for (let anchor of anchors) {
+    anchor.addEventListener('click', function (evt) {
+      evt.preventDefault();
+
+      const blockID = anchor.getAttribute('href').substr(1);
+
+      document.getElementById(blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    });
+  }
+
+  // Меню (навигация)
+  menuNav.classList.remove('header--nojs');
+  menuNav.classList.add('header--close');
+  buttonHumburger.classList.add('button-toggle--close');
+  buttonHumburger.addEventListener('click', openMenu);
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

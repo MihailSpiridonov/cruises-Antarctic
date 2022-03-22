@@ -50,6 +50,7 @@
     "gulp-webp": "4.0.1",
     "stylelint": "13.13.1",
     "webpack": "4.42.0",
-    "webpack-stream": "5.2.1"
+    "webpack-stream": "5.2.1",
+    "stylelint-config-htmlacademy": "0.1.10"
   }
 }

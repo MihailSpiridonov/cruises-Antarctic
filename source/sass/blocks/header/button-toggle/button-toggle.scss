@@ -23,8 +23,18 @@
   }
 }
 
+.header--nojs .button-toggle {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
 .header--open .button-toggle {
   @media (max-width: $mobile-width) {
+    position: absolute;
+    content: "";
+    top: 17px;
+    right: 1%;
     width: 20px;
     height: 30px;
     padding-bottom: 10px;
@@ -51,6 +61,8 @@
   cursor: pointer;
 }
 
+.header--open .button-toggle__line,
+.header--close .button-toggle__line,
 .button-toggle__line {
   position: absolute;
   content: "";
@@ -64,43 +76,53 @@
 }
 
 .header--open .button-toggle__line {
-  background-color: $text-dark-blue;
+  @media (max-width: $mobile-width) {
+    background-color: $text-dark-blue;
+  }
 }
 
-.button-toggle__line--1 {
-  top: 5px;
-  display: none;
+.button-toggle--open {
+  & .button-toggle__line--1 {
+    top: 5px;
+    display: none;
+  }
+
+  & .button-toggle__line--2 {
+    transform: rotate(45deg);
+    top: 12px;
+    transition: 0.5s all;
+  }
+
+  & .button-toggle__line--3 {
+    transform: rotate(-45deg);
+    top: 12px;
+    transition: 0.5s all;
+  }
+
+  & .button-toggle__line--4 {
+    top: 19px;
+    display: none;
+  }
 }
 
-.button-toggle__line--2 {
-  transform: rotate(45deg);
-  top: 12px;
-  transition: 0.5s all;
-}
+.button-toggle--close {
+  & .button-toggle__line--1 {
+    top: 5px;
+    display: block;
+  }
 
-.button-toggle__line--3 {
-  transform: rotate(-45deg);
-  top: 12px;
-  transition: 0.5s all;
-}
+  & .button-toggle__line--2 {
+    top: 12px;
+    transform: rotate(0);
+  }
 
-.button-toggle__line--4 {
-  top: 19px;
-  display: none;
-}
+  & .button-toggle__line--3 {
+    top: 12px;
+    transform: rotate(0);
+  }
 
-.button-toggle__input:checked ~ .button-toggle__line--1 {
-  display: block;
-}
-
-.button-toggle__input:checked ~ .button-toggle__line--2 {
-  transform: rotate(0);
-}
-
-.button-toggle__input:checked ~ .button-toggle__line--3 {
-  transform: rotate(0);
-}
-
-.button-toggle__input:checked ~ .button-toggle__line--4 {
-  display: block;
+  & .button-toggle__line--4 {
+    top: 19px;
+    display: block;
+  }
 }

@@ -8,11 +8,11 @@
   }
 }
 
-.nav--nojs {
+.header--nojs .nav {
   @media (max-width: $mobile-width) {
     display: block;
     z-index: 1;
-    width: 89vw;
+    width: 89%;
     min-height: 568px;
     margin: 0;
     margin-left: auto;
@@ -20,7 +20,7 @@
   }
 }
 
-.nav--open {
+.header--open .nav {
   @media (max-width: $mobile-width) {
     position: absolute;
     content: "";
@@ -28,7 +28,7 @@
     right: 0;
     z-index: 1;
     display: inline-block;
-    width: 89vw;
+    width: 89%;
     min-height: 568px;
     margin: 0;
     margin-left: auto;
@@ -36,7 +36,7 @@
   }
 }
 
-.nav--close {
+.header--close .nav {
   @media (max-width: $mobile-width) {
     display: none;
   }
@@ -67,17 +67,19 @@
   @media (max-width: $mobile-width) {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 5px;
     min-height: 105px;
     padding-bottom: 0;
   }
 }
 
-.nav--open .nav__list,
-.nav--nojs .nav__list {
-  flex-direction: column;
-  padding-top: 85px;
-  padding-left: 25px;
+.header--open .nav__list,
+.header--nojs .nav__list {
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    padding-top: 85px;
+    padding-left: 25px;
+  }
 }
 
 .nav__item {
@@ -85,7 +87,6 @@
   padding: 0;
   border: none;
   cursor: pointer;
-  //transition: 0.5s all;
 }
 
 .nav__item:active,
@@ -113,11 +114,13 @@
   }
 }
 
-.nav--open .nav__link,
-.nav--nojs .nav__link {
-  font-size: 18px;
-  line-height: 22px;
-  color: $text-dark-blue;
+.header--open .nav__link,
+.header--nojs .nav__link {
+  @media (max-width: $mobile-width) {
+    font-size: 18px;
+    line-height: 22px;
+    color: $text-dark-blue;
+  }
 }
 
 .nav__item:hover .nav__link {

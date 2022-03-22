@@ -1,92 +1,16 @@
+// Viewports
 $desktop-width-only: 1160px;
 $tablet-width: 1159px;
 $mobile-width: 767px;
 
+// Colors
 $text-white: #f9fbfd;
 $text-white-opacity: #d8d8d9;
 $text-dark-blue: #011c40;
 $text-input: rgba(1, 28, 64, 0.7);
+$color-error: #ff0000;
+$background-error: #ffcccc;
 
-$shadow-cruise: 0px 4px 35px rgba(1, 28, 64, 0.15);
-$shadow-form: 0px 4px 45px rgba(1, 28, 64, 0.15);
-
-//////
-
-$white-color: #ffffff;
-$white-color-70: rgba(255, 255, 255, 0.7);
-$black-color: #000000;
-$background-color: #fbf8f8;
-$border-color: #d7d9df;
-$nav-color: #48494d;
-
-$button-color: #fe7865;
-$button-color-50: rgba(254, 120, 101, 0.5);
-$button-color--hover: #f17d4b;
-
-$dark-color: #141517;
-$dark-color-50: rgba(20, 21, 23, 0.5);
-$dark-color-60: rgba(20, 21, 23, 0.6);
-
-$dark-color--light: #2c2e3f;
-$dark-color--light-30: rgba(44, 46, 63, 0.3);
-$dark-color--light-70: rgba(44, 46, 63, 0.7);
-
-
-// Colors
-// ---------------------------------
-
-// Default
-
-$color-default-black:               #000000;
-$color-default-white:               #ffffff;
-$color-transparent:                 rgba(255, 255, 255, 0);
-
-// Project palette
-// для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
-
-$color-neon-blue:                   #2c39f2;
-$color-torch-red:                   #ff1553;
-
-// Gradient
-
-$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
-
-// Typography
-// ---------------------------------
-
-// переменная используемая в html для подключения скейлинга
-$fz-default:                        16px;
-
-// у некоторых шрифтов в ios возникают проблемы с символом рубля
-// https://www.artlebedev.ru/kovodstvo/sections/159/#13
-$ff-rouble:                         "Rouble", "Arial", sans-serif;
-
-$ff-placeholder:                    "Placeholder", "Arial", sans-serif;
-
-// Animation
-// ---------------------------------
-
-$tf-default:                        ease;
-$trans-default:                     0.3s $tf-default;
-
-// если требуется изинг отличный от $tf-default, то переменную называем не цифрой
-$trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
-
-$trans-600:                         0.6s $tf-default;
-
-// Viewports
-// ---------------------------------
-
-$vp-320:                            320px;
-$vp-375:                            375px;
-$vp-768:                            768px;
-$vp-1024:                           1024px;
-$vp-1280:                           1280px;
-$vp-1440:                           1440px;
-$vp-1920:                           1920px;
-
-// Retina
-// ---------------------------------
-
-$retina-dpi:                        144dpi;
-$retina-dppx:                       1.5dppx;
+// Shadow
+$shadow-cruise: 0 4px 35px rgba(1, 28, 64, 0.15);
+$shadow-form: 0 4px 45px rgba(1, 28, 64, 0.15);
