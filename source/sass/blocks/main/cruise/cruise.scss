@@ -38,11 +38,10 @@
   padding: 0;
   margin: 0;
   background-color: #819ab6;
-  //object-fit: cover;
   box-sizing: border-box;
 }
 
-.cruise__title {
+.cruise h3 {
   position: absolute;
   content: "";
   bottom: 25px;
@@ -68,8 +67,8 @@
   }
 }
 
-.cruise:hover .cruise__title,
-.cruise:focus .cruise__title {
+.cruise:hover h3,
+.cruise:focus h3 {
   bottom: 0;
   top: 28px;
   left: 25px;
@@ -89,12 +88,10 @@
   display: block;
   width: 100%;
   min-height: 386px;
-  //height: 100%;
   padding: 100px 15px;
   padding-left: 25px;
   padding-top: 70px;
   margin: 0;
-  margin-bottom: 30px;  ///////////////////////////
   background-color: $text-dark-blue;
   box-shadow: $shadow-cruise;
   box-sizing: border-box;
@@ -109,7 +106,7 @@
   }
 }
 
-.cruise__table {
+.cruise__hover table {
   padding: 0;
   margin: 0;
 }
@@ -127,7 +124,7 @@ tbody {
   }
 }
 
-.cruise__line {
+.cruise__hover tr {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -136,7 +133,7 @@ tbody {
   margin: 0;
 }
 
-.cruise__subtitle {
+.cruise__hover th {
   padding: 0;
   margin: 0;
   font-weight: 500;
@@ -145,7 +142,7 @@ tbody {
   color: $text-white;
 }
 
-.cruise__text {
+.cruise__hover td {
   padding: 0;
   margin: 0;
   font-weight: 400;
@@ -154,7 +151,7 @@ tbody {
   color: $text-white-opacity;
 }
 
-.cruise__link {
+.cruise__hover a {
   position: absolute;
   content: "";
   left: 25px;

@@ -31,7 +31,7 @@
   background-color: #d8e4f1;
 }
 
-.advantages .wrapper {
+.advantages__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,7 +46,7 @@
   }
 }
 
-.advantages__title {
+.advantages__wrapper h2 {
   z-index: 1;
   padding: 0;
   margin: 0;
@@ -69,7 +69,7 @@
   }
 }
 
-.advantages__list {
+.advantages__wrapper ul {
   z-index: 1;
   display: flex;
   gap: 40px;
@@ -87,7 +87,7 @@
   }
 }
 
-.advantages__item {
+.advantages__wrapper li {
   width: 31%;
 
   @media (max-width: $mobile-width) {
