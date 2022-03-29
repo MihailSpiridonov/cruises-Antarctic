@@ -35,9 +35,10 @@
   position: absolute;
   content: "";
   top: 0;
-  left: 12%;
+  left: calc(50% - 520px);
   display: flex;
   justify-content: space-between;
+  max-width: 1160px;
   width: 76%;
   min-width: 1040px;
   padding: 0;

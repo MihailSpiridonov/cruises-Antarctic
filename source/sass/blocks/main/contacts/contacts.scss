@@ -1,6 +1,7 @@
 .contacts {
   display: flex;
   gap: 100px;
+  max-width: 1160px;
   min-height: 306px;
 
   @media (max-width: $tablet-width) {

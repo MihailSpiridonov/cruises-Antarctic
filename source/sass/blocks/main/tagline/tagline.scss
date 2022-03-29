@@ -37,7 +37,8 @@
   position: absolute;
   content: "";
   top: 41%;
-  left: 14%;
+  left: calc(50% - 490px);
+  max-width: 1160px;
   min-height: 85px;
   padding-left: 6px;
 

@@ -1,18 +1,33 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {buttonHumburger, menuNav, openMenu} from './modules/menu-mobile/menu-mobile.js';
+import {buttonHumburger, menuNav, openMenu, openMenuKey, closeMenuKey} from './modules/menu-mobile/menu-mobile.js';
 import {form, formSend} from './modules/form-validation/form-validation.js';
+import {cruises, manageModalBooking} from './modules/ModalBooking/ModalBooking.js';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
 
-  // Utils
-  // ---------------------------------
-
   iosVhFix();
 
-  // Modules
+
+  // Модальное окно
+  if (cruises.length > 0) {
+    for (let i = 0; i < cruises.length; i++) {
+      const cruise = cruises[i];
+      manageModalBooking(cruise);
+    }
+  }
+
+
+  // Меню (навигация)
+  menuNav.classList.remove('header--nojs');
+  menuNav.classList.add('header--close');
+  buttonHumburger.classList.add('button-toggle--close');
+  buttonHumburger.addEventListener('click', openMenu);
+  document.addEventListener('keydown', openMenuKey);
+  document.addEventListener('keydown', closeMenuKey);
+
 
   // Form validation
   form.addEventListener('submit', formSend);
@@ -34,12 +49,12 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Меню (навигация)
-  menuNav.classList.remove('header--nojs');
-  menuNav.classList.add('header--close');
-  buttonHumburger.classList.add('button-toggle--close');
-  buttonHumburger.addEventListener('click', openMenu);
+  // Modules
 
+  // Utils
+
+
+  // ---------------------------------
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {

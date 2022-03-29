@@ -22,17 +22,24 @@
 
 .header--open .nav {
   @media (max-width: $mobile-width) {
-    position: absolute;
+    position: fixed;
     content: "";
     top: 0;
     right: 0;
     z-index: 1;
-    display: inline-block;
+    display: block;
     width: 89%;
     min-height: 568px;
     margin: 0;
     margin-left: auto;
     background-color: $text-white;
+  }
+}
+
+.nav--overlay {
+  @media (max-width: $mobile-width) {
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 }
 
@@ -107,19 +114,19 @@
   }
 }
 
-.footer .nav a {
-  @media (max-width: $tablet-width) {
-    font-size: 12px;
-    line-height: 15px;
-  }
-}
-
 .header--open .nav a,
 .header--nojs .nav a {
   @media (max-width: $mobile-width) {
     font-size: 18px;
     line-height: 22px;
     color: $text-dark-blue;
+  }
+}
+
+.footer .nav a {
+  @media (max-width: $tablet-width) {
+    font-size: 12px;
+    line-height: 15px;
   }
 }
 

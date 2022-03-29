@@ -1,44 +1,5 @@
 const form = document.querySelector('[data-form]');
 
-function formSend(event) {
-  event.preventDefault();
-  let err = formValidate(form);
-
-  if (err === 0) {
-    // eslint-disable-next-line no-alert
-    alert('GREAT');
-    form.reset();
-  } else {
-    // eslint-disable-next-line no-alert
-    alert('WARNING');
-  }
-}
-
-function formValidate(element) {
-  let error = 0;
-  let formRequired = element.querySelectorAll('[required]');
-
-  for (let i = 0; i < formRequired.length; i++) {
-    const input = formRequired[i];
-    formRemoveError(input);
-
-    if (input.getAttribute('type') === 'email') {
-      if (emailTest(input)) {
-        formAddError(input);
-        error++;
-      }
-    } else if (input.getAttribute('type') === 'checkbox' && input.checked === false) {
-      formAddError(input);
-      error++;
-    } else {
-      if (input.value === '') {
-        formAddError(input);
-        error++;
-      }
-    }
-  }
-  return error;
-}
 
 // Add class
 function formAddError(input) {
@@ -55,6 +16,49 @@ function formRemoveError(input) {
 // Test email
 function emailTest(input) {
   return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+}
+
+
+function formValidate(element) {
+  let error = 0;
+  let formRequired = element.querySelectorAll('[required]');
+
+  if (formRequired.length > 0) {
+    for (let i = 0; i < formRequired.length; i++) {
+      formRemoveError(formRequired[i]);
+
+      if (formRequired[i].getAttribute('type') === 'email') {
+        if (emailTest(formRequired[i])) {
+          formAddError(formRequired[i]);
+          error++;
+        }
+      } else if (formRequired[i].getAttribute('type') === 'checkbox' && formRequired[i].checked === false) {
+        formAddError(formRequired[i]);
+        error++;
+      } else {
+        if (formRequired[i].value === '') {
+          formAddError(formRequired[i]);
+          error++;
+        }
+      }
+    }
+  }
+  return error;
+}
+
+
+function formSend(evt) {
+  evt.preventDefault();
+  let error = formValidate(form);
+
+  if (error === 0) {
+    // eslint-disable-next-line no-alert
+    alert('GREAT');
+    form.reset();
+  } else {
+    // eslint-disable-next-line no-alert
+    alert('WARNING');
+  }
 }
 
 

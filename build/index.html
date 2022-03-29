@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="page page--index" lang="ru">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Описание проекта">
     <title>Круизы в Антарктику</title>
     <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/Montserrat-Regular.woff" as="font" type="font/woff" crossorigin>
@@ -21,14 +21,14 @@
 
   <!-- header start -->
 
-  <body class="page__body body">
-    <header class="body__header header header--nojs" data-header>
+  <body class="page__body" data-body>
+    <header class="page__header header header--nojs" data-header>
       <a class="header__logo logo">
         <svg width="70" height="38" aria-label="Логотип с изображением гор">
           <use xlink:href="img/sprite_auto.svg#logo"></use>
         </svg>
       </a>
-      <nav class="header__nav nav">
+      <nav class="header__nav nav" data-nav>
         <ul>
           <li>
             <a href="#advantages" data-nav-link>Преимущества</a>
@@ -44,10 +44,8 @@
           </li>
         </ul>
       </nav>
-      <div class="header__button-toggle button-toggle" data-button-toggle>
+      <div class="header__button-toggle button-toggle" tabindex="0" data-button-toggle>
           <div class="button-toggle__wrapper">
-            <label for="burger-menu"></label>
-            <input type="checkbox" id="burger-menu">
             <div class="button-toggle__line button-toggle__line--1"></div>
             <div class="button-toggle__line button-toggle__line--2"></div>
             <div class="button-toggle__line button-toggle__line--3"></div>
@@ -65,11 +63,11 @@
         <div class="tagline__image">
           <picture>
             <source type="image/webp" media="(max-width: 767px)" srcset="img/content/antarctic_mobile.webp 1x, img/content/antarctic_mobile_2x.webp 2x">
-            <source type="image/webp" media="(max-width: 1365px)" srcset="img/content/antarctic_tablet.webp 1x, img/content/antarctic_tablet_2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/antarctic_tablet.webp 1x, img/content/antarctic_tablet_2x.webp 2x">
             <source type="image/webp" srcset="img/content/antarctic_desctop.webp 1x, img/content/antarctic_desctop_2x.webp 2x">
 
             <source media="(max-width: 767px)" srcset="img/content/antarctic_mobile.jpg 1x, img/content/antarctic_mobile_2x.jpg 2x">
-            <source media="(max-width: 1365px)" srcset="img/content/antarctic_tablet.jpg 1x, img/content/antarctic_tablet_2x.jpg 2x">
+            <source media="(max-width: 1023px)" srcset="img/content/antarctic_tablet.jpg 1x, img/content/antarctic_tablet_2x.jpg 2x">
 
             <!--desctop 1х: 1366px; 2x: 2732px;
                 tablet 1х: 768px; 2x: 1536px;
@@ -78,8 +76,8 @@
           </picture>
         </div>
         <div class="tagline__wrapper-text wrapper">
-          <h1>Круизы в Антарктику</h1>
-          <p>Волшебный мир айсбергов и пингвинов</p>
+          <h1>Круизы в&nbsp;Антарктику</h1>
+          <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
         </div>
       </section>
 
@@ -88,17 +86,17 @@
 
       <section class="about wrapper" id="about">
         <div class="about__wrapper-text">
-          <h2>Путешествие на край Земли</h2>
-          <p>Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+          <h2>Путешествие на&nbsp;край Земли</h2>
+          <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
         </div>
         <div class="about__image">
           <picture>
             <source type="image/webp" media="(max-width: 767px)" srcset="img/content/penguins_mobile.webp 1x, img/content/penguins_mobile_2x.webp 2x">
-            <source type="image/webp" media="(max-width: 1365px)" srcset="img/content/penguins_tablet.webp 1x, img/content/penguins_tablet_2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/penguins_tablet.webp 1x, img/content/penguins_tablet_2x.webp 2x">
             <source type="image/webp" srcset="img/content/penguins_desctop.webp 1x, img/content/penguins_desctop_2x.webp 2x">
 
             <source media="(max-width: 767px)" srcset="img/content/penguins_mobile.jpg 1x, img/content/penguins_mobile_2x.jpg 2x">
-            <source media="(max-width: 1365px)" srcset="img/content/penguins_tablet.jpg 1x, img/content/penguins_tablet_2x.jpg 2x">
+            <source media="(max-width: 1023px)" srcset="img/content/penguins_tablet.jpg 1x, img/content/penguins_tablet_2x.jpg 2x">
 
             <!--desctop 1х: 560px; 2x: 1120px;
                 tablet 1х: 324px; 2x: 648px;
@@ -115,16 +113,16 @@
         <div class="advantages__image">
           <picture>
             <source type="image/webp" media="(max-width: 767px)" srcset="img/content/advantage_bg_mobile.webp 1x, img/content/advantage_bg_mobile_2x.webp 2x">
-            <source type="image/webp" media="(max-width: 1365px)" srcset="img/content/advantage_bg_tablet.webp 1x, img/content/advantage_bg_tablet_2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/advantage_bg_tablet.webp 1x, img/content/advantage_bg_tablet_2x.webp 2x">
             <source type="image/webp" srcset="img/content/advantage_bg_desctop.webp 1x, img/content/advantage_bg_desctop_2x.webp 2x">
 
-            <source media="(max-width: 767px)" srcset="img/content/advantage_bg_mobile.png 1x, img/content/advantage_bg_mobile_2x.png 2x">
-            <source media="(max-width: 1365px)" srcset="img/content/advantage_bg_tablet.png 1x, img/content/advantage_bg_tablet_2x.png 2x">
+            <source media="(max-width: 767px)" srcset="img/content/advantage_bg_mobile.jpg 1x, img/content/advantage_bg_mobile_2x.jpg 2x">
+            <source media="(max-width: 1023px)" srcset="img/content/advantage_bg_tablet.jpg 1x, img/content/advantage_bg_tablet_2x.jpg 2x">
 
             <!--desctop 1х: 1366px; 2x: 2732px;
                 tablet 1х: 768px; 2x: 1536px;
                 mobile 1х: 320px; 2x: 640px; -->
-            <img src="img/content/advantage_bg_desctop.png" srcset="img/content/advantage_bg_desctop_2x.png 2x" width="1366" height="562" alt="Едва заметные облака на голубом небе">
+            <img src="img/content/advantage_bg_desctop.jpg" srcset="img/content/advantage_bg_desctop_2x.jpg 2x" width="1366" height="562" alt="Едва заметные облака на голубом небе">
           </picture>
         </div>
         <div class="advantages__wrapper wrapper">
@@ -138,7 +136,7 @@
                   </svg>
                 </div>
                 <h3>Небольшой круизный лайнер</h3>
-                <p>Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст возможность насладиться видами и природой.</p>
+                <p>Круизный лайнер, рассчитанный всего лишь на&nbsp;300&nbsp;гостей, поможет избежать шума и&nbsp;очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.</p>
               </div>
             </li>
             <li>
@@ -149,8 +147,7 @@
                   </svg>
                 </div>
                 <h3>Система все включено</h3>
-                <p>Все наши круизы работают
-                  по системе “Все Включено”. Великолепные блюда и безлимитный бар доступны для вас 24 часа.</p>
+                <p>Все наши круизы работают по&nbsp;системе &laquo;Все Включено&raquo;. Великолепные блюда и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.</p>
               </div>
             </li>
             <li>
@@ -160,8 +157,8 @@
                     <use xlink:href="img/sprite_auto.svg#boat"></use>
                   </svg>
                 </div>
-                <h3>Экскурсионные туры на Zodiac</h3>
-                <p>Экскурсионные туры к берегам Антарктиды совершаются на оборудованных лодках типа Zodiac в сопровождении опытных экскурсоводов.</p>
+                <h3>Экскурсионные туры на&nbsp;Zodiac</h3>
+                <p>Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа Zodiac в&nbsp;сопровождении опытных экскурсоводов.</p>
               </div>
             </li>
           </ul>
@@ -174,14 +171,14 @@
       <section class="next-cruises wrapper" id="next-cruises">
         <h2>Ближайшие круизы</h2>
         <ul>
-          <li tabindex="0">
-            <div class="next-cruises__item cruise cruise--Astoria">
+          <li>
+            <div class="next-cruises__item cruise cruise--Astoria" tabindex="0" data-cruise>
               <div class="cruise__image">
                 <picture>
-                  <source type="image/webp" media="(min-width: 768px) and (max-width: 1365px)" srcset="img/content/cruise-Astoria_tablet.webp 1x, img/content/cruise-Astoria_tablet_2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px) and (max-width: 1023px)" srcset="img/content/cruise-Astoria_tablet.webp 1x, img/content/cruise-Astoria_tablet_2x.webp 2x">
                   <source type="image/webp" srcset="img/content/cruise-Astoria.webp 1x, img/content/cruise-Astoria_2x.webp 2x">
 
-                  <source media="(min-width: 768px) and (max-width: 1365px)" srcset="img/content/cruise-Astoria_tablet.jpg 1x, img/content/cruise-Astoria_tablet_2x.jpg 2x">
+                  <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/content/cruise-Astoria_tablet.jpg 1x, img/content/cruise-Astoria_tablet_2x.jpg 2x">
 
               <!--desctop 1х: 260px; 2x: 520px;
                   tablet 1х: 309px; 2x: 618px;
@@ -190,7 +187,7 @@
                 </picture>
               </div>
               <h3>Круиз “Астория”</h3>
-              <div class="cruise__hover">
+              <div class="cruise__hover" data-cruiseModal>
                 <table>
                   <tr>
                     <th>Маршрут</th>
@@ -209,18 +206,18 @@
                     <td>от 11500 $</td>
                   </tr>
                 </table>
-                <a href="#">Забронировать</a>
+                <a href="#show-popup-booking" tabindex="1" data-button>Забронировать-1</a>
               </div>
             </div>
           </li>
-          <li tabindex="0">
-            <div class="next-cruises__item cruise cruise--Elaine">
+          <li>
+            <div class="next-cruises__item cruise cruise--Elaine" tabindex="0" data-cruise>
               <div class="cruise__image">
                 <picture>
-                  <source type="image/webp" media="(min-width: 768px) and (max-width: 1365px)" srcset="img/content/cruise-Astoria_tablet.webp 1x, img/content/cruise-Astoria_tablet_2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px) and (max-width: 1023px)" srcset="img/content/cruise-Astoria_tablet.webp 1x, img/content/cruise-Astoria_tablet_2x.webp 2x">
                   <source type="image/webp" srcset="img/content/cruise-Astoria.webp 1x, img/content/cruise-Astoria_2x.webp 2x">
 
-                  <source media="(min-width: 768px) and (max-width: 1365px)" srcset="img/content/cruise-Astoria_tablet.jpg 1x, img/content/cruise-Astoria_tablet_2x.jpg 2x">
+                  <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/content/cruise-Astoria_tablet.jpg 1x, img/content/cruise-Astoria_tablet_2x.jpg 2x">
 
               <!--desctop 1х: 260px; 2x: 520px;
                   tablet 1х: 309px; 2x: 618px;
@@ -229,7 +226,7 @@
                 </picture>
               </div>
               <h3>Круиз “Элайн”</h3>
-              <div class="cruise__hover">
+              <div class="cruise__hover" data-cruiseModal>
                 <table>
                   <tr>
                     <th>Маршрут</th>
@@ -248,18 +245,18 @@
                     <td>от 14500 $</td>
                   </tr>
                 </table>
-                <a href="#">Забронировать</a>
+                <a href="#show-popup-booking" tabindex="1" data-button>Забронировать-2</a>
               </div>
             </div>
           </li>
-          <li tabindex="0">
-            <div class="next-cruises__item cruise cruise--Atlantis">
+          <li>
+            <div class="next-cruises__item cruise cruise--Atlantis" tabindex="0" data-cruise>
               <div class="cruise__image">
                 <picture>
-                  <source type="image/webp" media="(min-width: 768px) and (max-width: 1365px)" srcset="img/content/cruise-Atlantis_tablet.webp 1x, img/content/cruise-Atlantis_tablet_2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px) and (max-width: 1023px)" srcset="img/content/cruise-Atlantis_tablet.webp 1x, img/content/cruise-Atlantis_tablet_2x.webp 2x">
                   <source type="image/webp" srcset="img/content/cruise-Atlantis.webp 1x, img/content/cruise-Atlantis_2x.webp 2x">
 
-                  <source media="(min-width: 768px) and (max-width: 1365px)" srcset="img/content/cruise-Atlantis_tablet.jpg 1x, img/content/cruise-Atlantis_tablet_2x.jpg 2x">
+                  <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/content/cruise-Atlantis_tablet.jpg 1x, img/content/cruise-Atlantis_tablet_2x.jpg 2x">
 
               <!--desctop 1х: 260px; 2x: 520px;
                   tablet 1х: 309px; 2x: 618px;
@@ -268,7 +265,7 @@
                 </picture>
               </div>
               <h3>Круиз “Атлантис”</h3>
-              <div class="cruise__hover">
+              <div class="cruise__hover" data-cruiseModal>
                 <table>
                   <tr>
                     <th>Маршрут</th>
@@ -287,18 +284,18 @@
                     <td>от 14500 $</td>
                   </tr>
                 </table>
-                <a href="#">Забронировать</a>
+                <a href="#show-popup-booking" tabindex="1" data-button>Забронировать-3</a>
               </div>
             </div>
           </li>
-          <li tabindex="0">
-            <div class="next-cruises__item cruise cruise--Odyssey">
+          <li>
+            <div class="next-cruises__item cruise cruise--Odyssey" tabindex="0" data-cruise>
               <div class="cruise__image">
                 <picture>
-                  <source type="image/webp" media="(min-width: 768px) and (max-width: 1365px)" srcset="img/content/cruise-Odyssey_tablet.webp 1x, img/content/cruise-Odyssey_tablet_2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px) and (max-width: 1023px)" srcset="img/content/cruise-Odyssey_tablet.webp 1x, img/content/cruise-Odyssey_tablet_2x.webp 2x">
                   <source type="image/webp" srcset="img/content/cruise-Odyssey.webp 1x, img/content/cruise-Odyssey_2x.webp 2x">
 
-                  <source media="(min-width: 768px) and (max-width: 1365px)" srcset="img/content/cruise-Odyssey_tablet.jpg 1x, img/content/cruise-Odyssey_tablet_2x.jpg 2x">
+                  <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/content/cruise-Odyssey_tablet.jpg 1x, img/content/cruise-Odyssey_tablet_2x.jpg 2x">
 
               <!--desctop 1х: 260px; 2x: 520px;
                   tablet 1х: 309px; 2x: 618px;
@@ -326,18 +323,18 @@
                     <td>от 9700 $</td>
                   </tr>
                 </table>
-                <a href="#">Забронировать</a>
+                <a href="#show-popup-booking" tabindex="1" data-button>Забронировать-4</a>
               </div>
             </div>
           </li>
-          <li tabindex="0">
-            <div class="next-cruises__item cruise cruise--Olympia">
+          <li>
+            <div class="next-cruises__item cruise cruise--Olympia" tabindex="0" data-cruise>
               <div class="cruise__image">
                 <picture>
-                  <source type="image/webp" media="(min-width: 768px) and (max-width: 1365px)" srcset="img/content/cruise-Olympia_tablet.webp 1x, img/content/cruise-Olympia_tablet_2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px) and (max-width: 1023px)" srcset="img/content/cruise-Olympia_tablet.webp 1x, img/content/cruise-Olympia_tablet_2x.webp 2x">
                   <source type="image/webp" srcset="img/content/cruise-Olympia.webp 1x, img/content/cruise-Olympia_2x.webp 2x">
 
-                  <source media="(min-width: 768px) and (max-width: 1365px)" srcset="img/content/cruise-Olympia_tablet.jpg 1x, img/content/cruise-Olympia_tablet_2x.jpg 2x">
+                  <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/content/cruise-Olympia_tablet.jpg 1x, img/content/cruise-Olympia_tablet_2x.jpg 2x">
 
               <!--desctop 1х: 260px; 2x: 520px;
                   tablet 1х: 309px; 2x: 618px;
@@ -365,18 +362,18 @@
                     <td>от 18600 $</td>
                   </tr>
                 </table>
-                <a href="#">Забронировать</a>
+                <a href="#show-popup-booking" tabindex="1" data-button>Забронировать-5</a>
               </div>
             </div>
           </li>
-          <li tabindex="0">
-            <div class="next-cruises__item cruise cruise--Aurora">
+          <li>
+            <div class="next-cruises__item cruise cruise--Aurora" tabindex="0" data-cruise>
               <div class="cruise__image">
                 <picture>
-                  <source type="image/webp" media="(min-width: 768px) and (max-width: 1365px)" srcset="img/content/cruise-Aurora_tablet.webp 1x, img/content/cruise-Aurora_tablet_2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px) and (max-width: 1023px)" srcset="img/content/cruise-Aurora_tablet.webp 1x, img/content/cruise-Aurora_tablet_2x.webp 2x">
                   <source type="image/webp" srcset="img/content/cruise-Aurora.webp 1x, img/content/cruise-Aurora_2x.webp 2x">
 
-                  <source media="(min-width: 768px) and (max-width: 1365px)" srcset="img/content/cruise-Aurora_tablet.jpg 1x, img/content/cruise-Aurora_tablet_2x.jpg 2x">
+                  <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/content/cruise-Aurora_tablet.jpg 1x, img/content/cruise-Aurora_tablet_2x.jpg 2x">
 
               <!--desctop 1х: 260px; 2x: 520px;
                   tablet 1х: 309px; 2x: 618px;
@@ -404,18 +401,18 @@
                     <td>от 11700 $</td>
                   </tr>
                 </table>
-                <a href="#">Забронировать</a>
+                <a href="#show-popup-booking" tabindex="1" data-button>Забронировать-6</a>
               </div>
             </div>
           </li>
-          <li tabindex="0">
-            <div class="next-cruises__item cruise cruise--Leonor">
+          <li>
+            <div class="next-cruises__item cruise cruise--Leonor" tabindex="0" data-cruise>
               <div class="cruise__image">
                 <picture>
-                  <source type="image/webp" media="(min-width: 768px) and (max-width: 1365px)" srcset="img/content/cruise-Leonor_tablet.webp 1x, img/content/cruise-Leonor_2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px) and (max-width: 1023px)" srcset="img/content/cruise-Leonor_tablet.webp 1x, img/content/cruise-Leonor_2x.webp 2x">
                   <source type="image/webp" srcset="img/content/cruise-Leonor.webp 1x, img/content/cruise-Leonor_2x.webp 2x">
 
-                  <source media="(min-width: 768px) and (max-width: 1365px)" srcset="img/content/cruise-Leonor_tablet.jpg 1x, img/content/cruise-Leonor_tablet_2x.jpg 2x">
+                  <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/content/cruise-Leonor_tablet.jpg 1x, img/content/cruise-Leonor_tablet_2x.jpg 2x">
 
               <!--desctop 1х: 260px; 2x: 520px;
                   tablet 1х: 309px; 2x: 618px;
@@ -443,18 +440,18 @@
                     <td>от 12500 $</td>
                   </tr>
                 </table>
-                <a href="#">Забронировать</a>
+                <a href="#show-popup-booking" tabindex="1" data-button>Забронировать-7</a>
               </div>
             </div>
           </li>
-          <li tabindex="0">
-            <div class="next-cruises__item cruise cruise--Minion-1">
+          <li>
+            <div class="next-cruises__item cruise cruise--Minion-1" tabindex="0" data-cruise>
               <div class="cruise__image">
                 <picture>
-                  <source type="image/webp" media="(min-width: 768px) and (max-width: 1365px)" srcset="img/content/cruise-Minion-1_tablet.webp 1x, img/content/cruise-Minion-1_tablet_2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px) and (max-width: 1023px)" srcset="img/content/cruise-Minion-1_tablet.webp 1x, img/content/cruise-Minion-1_tablet_2x.webp 2x">
                   <source type="image/webp" srcset="img/content/cruise-Minion-1.webp 1x, img/content/cruise-Minion-1_2x.webp 2x">
 
-                  <source media="(min-width: 768px) and (max-width: 1365px)" srcset="img/content/cruise-Minion-1_tablet.jpg 1x, img/content/cruise-Minion-1_tablet_2x.jpg 2x">
+                  <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/content/cruise-Minion-1_tablet.jpg 1x, img/content/cruise-Minion-1_tablet_2x.jpg 2x">
 
               <!--desctop 1х: 260px; 2x: 520px;
                   tablet 1х: 309px; 2x: 618px;
@@ -482,7 +479,7 @@
                     <td>от 12300 $</td>
                   </tr>
                 </table>
-                <a href="#">Забронировать</a>
+                <a href="#show-popup-booking" tabindex="1" data-button>Забронировать-8</a>
               </div>
             </div>
           </li>
@@ -496,11 +493,11 @@
         <div class="booking__image">
           <picture>
             <source type="image/webp" media="(max-width: 767px)" srcset="img/content/booking_bg_mobile.webp 1x, img/content/booking_bg_mobile_2x.webp 2x">
-            <source type="image/webp" media="(max-width: 1365px)" srcset="img/content/booking_bg_tablet.webp 1x, img/content/booking_bg_tablet_2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/booking_bg_tablet.webp 1x, img/content/booking_bg_tablet_2x.webp 2x">
             <source type="image/webp" srcset="img/content/booking_bg_desctop.webp 1x, img/content/booking_bg_desctop_2x.webp 2x">
 
             <source media="(max-width: 767px)" srcset="img/content/booking_bg_mobile.jpg 1x, img/content/booking_bg_mobile_2x.jpg 2x">
-            <source media="(max-width: 1365px)" srcset="img/content/booking_bg_tablet.jpg 1x, img/content/booking_bg_tablet_2x.jpg 2x">
+            <source media="(max-width: 1023px)" srcset="img/content/booking_bg_tablet.jpg 1x, img/content/booking_bg_tablet_2x.jpg 2x">
 
         <!--desctop 1х: 1366px; 2x: 2732px;
             tablet 1х: 768px; 2x: 1536px;
@@ -511,24 +508,23 @@
         <div class="booking__container">
           <div class="booking__description">
             <h2>Раннее бронирование</h2>
-            <p>Забронируйте тур за 3-6 месяцев
-              до даты выезда и сэкономьте до 50%</p>
+            <p>Забронируйте тур за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
           </div>
           <div class="booking__form form">
             <form method="GET" action="#" name="booking" data-form>
-              <h2>Оставьте заявку и мы свяжемся с вами в ближайшее время</h2>
+              <h2>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h2>
               <label>
                 <input type="text" name="name" placeholder="Имя" required data-name>
               </label>
               <label>
-                <input type="tel" name="phone" placeholder="Телефон" data-phone>
+                <input type="tel" name="phone" placeholder="Телефон: +7 (XXX) XXX-XX-XX" pattern="[+]7\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" required data-phone>
               </label>
               <label>
                 <input type="email" name="email" placeholder="Email" required data-email>
               </label>
               <input type="checkbox" name="checkbox" id="form__input--checkbox" required data-checkbox>
               <label for="form__input--checkbox">
-                Я согласен на обработку моих персональных данных
+                Я&nbsp;согласен на&nbsp;обработку моих персональных данных
               </label>
               <button class="form__submit" type="submit" data-submit>Оставить заявку</button>
             </form>
@@ -545,11 +541,11 @@
             <iframe src="https://yandex.ru/map-widget/v1/-/CCUBuIwrOB" width="560" height="306" tabindex="-1"></iframe>
             <picture>
               <source type="image/webp" media="(max-width: 767px)" srcset="img/content/map_mobile.webp 1x, img/content/map_mobile_2x.webp 2x">
-              <source type="image/webp" media="(max-width: 1365px)" srcset="img/content/map_tablet.webp 1x, img/content/map_tablet_2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/content/map_tablet.webp 1x, img/content/map_tablet_2x.webp 2x">
               <source type="image/webp" srcset="img/content/map_desctop.webp 1x, img/content/map_desctop_2x.webp 2x">
 
               <source media="(max-width: 767px)" srcset="img/content/map_mobile.png 1x, img/content/map_mobile_2x.png 2x">
-              <source media="(max-width: 1365px)" srcset="img/content/map_tablet.png 1x, img/content/map_tablet_2x.png 2x">
+              <source media="(max-width: 1023px)" srcset="img/content/map_tablet.png 1x, img/content/map_tablet_2x.png 2x">
 
           <!--desctop 1х: 560px; 2x: 1120px;
               tablet 1х: 324px; 2x: 648px;
@@ -560,7 +556,7 @@
         </div>
         <div class="contacts__our-contacts our-contacts">
           <h2 class="visually-hidden">Наша контактная информация</h2>
-          <p>У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.</p>
+          <p>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</p>
           <div class="our-contacts__wrapper our-contacts__address-wrapper">
             <svg width="18" height="22" fill="none" aria-label="Иконка маркера карты">
               <use xlink:href="img/sprite_auto.svg#marker"></use>
@@ -578,7 +574,19 @@
     </main>
 
 <!-- contacts end -->
-<!-- main end -->
+<!-- popup start -->
+
+      <aside class="popup">
+        <div class="popup-booking" id="show-popup-booking" data-booking>
+          <div class="popup-booking__wrapper">
+            <button type="button" data-booking--close>X</button>
+            <p>Ссылка на страницу бронирования круиза</p>
+            </div>
+          </div>
+      </aside>
+
+
+<!-- popup end -->
 <!-- footer start -->
 
     <footer class="page__footer footer">

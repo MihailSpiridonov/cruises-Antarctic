@@ -6,6 +6,7 @@
   margin: 0;
   box-sizing: border-box;
   cursor: pointer;
+  user-select: none;
 
   @media (max-width: $tablet-width) {
     width: 309px;
@@ -16,7 +17,7 @@
   }
 }
 
-.cruise:hover {
+.cruise--active {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -67,8 +68,7 @@
   }
 }
 
-.cruise:hover h3,
-.cruise:focus h3 {
+.cruise--active h3 {
   bottom: 0;
   top: 28px;
   left: 25px;
@@ -78,8 +78,7 @@
   display: none;
 }
 
-.cruise:hover .cruise__hover,
-.cruise:focus .cruise__hover {
+.cruise--active .cruise__hover {
   position: absolute;
   content: "";
   top: 0;
@@ -170,14 +169,6 @@ tbody {
   color: $text-dark-blue;
   cursor: pointer;
 
-  &:hover {
-    opacity: 0.7;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-
   @media (max-width: $tablet-width) {
     left: 37px;
     width: 239px;
@@ -187,4 +178,12 @@ tbody {
     left: 25px;
     width: 220px;
   }
+}
+
+.a--hover {
+  opacity: 0.7;
+}
+
+.a--active {
+  opacity: 0.3;
 }
