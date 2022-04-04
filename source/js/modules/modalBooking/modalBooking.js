@@ -1,42 +1,18 @@
-import {body} from '../menu-mobile/menu-mobile.js';
+import {body, overlay} from '../menu-mobile/menu-mobile.js';
 
 const cruises = document.querySelectorAll('[data-cruise]');
 const modalBooking = document.querySelector('[data-booking]');
 const modalBookingClose = modalBooking.querySelector('[data-booking--close]');
+let scroll = 0;
 
-
-// Закрытие popup
-const hideModalBooking = () => {
-  modalBooking.classList.remove('open');
-  body.classList.remove('page__body--overlay');
-  document.removeEventListener('keydown', hideModalBookingESC);
-  modalBookingClose.removeEventListener('click', hideModalBooking);
-  modalBooking.removeEventListener('click', hideModalBookingClickPast);
-};
-
-// Закрытие popup клавишей ESC
-const hideModalBookingESC = (evt) => {
-  if (evt.which === 27) {
-    modalBooking.classList.remove('open');
-    body.classList.remove('page__body--overlay');
-    document.removeEventListener('keydown', hideModalBookingESC);
-    modalBookingClose.removeEventListener('click', hideModalBooking);
-    modalBooking.removeEventListener('click', hideModalBookingClickPast);
-  }
-};
-
-// Закрытие popup кликом мыши в произвольной области
-const hideModalBookingClickPast = (evt) => {
-  if (!evt.target.closest('.popup-booking__wrapper')) {
-    modalBooking.classList.remove('open');
-    body.classList.remove('page__body--overlay');
-  }
-};
 
 // Открытие popup
 const showModalBooking = () => {
+  scroll = window.pageYOffset;
   modalBooking.classList.add('open');
   body.classList.add('page__body--overlay');
+  overlay.classList.remove('visually-hidden');
+  overlay.classList.add('page__overlay');
   document.addEventListener('keydown', hideModalBookingESC);
   modalBookingClose.addEventListener('click', hideModalBooking);
   modalBooking.addEventListener('click', hideModalBookingClickPast);
@@ -49,8 +25,48 @@ const hideModalBookingKey = (evt) => {
     if (evt.which === 32 && cruise.classList.contains('cruise--active') || evt.which === 13 && cruise.classList.contains('cruise--active')) {
       modalBooking.classList.add('open');
       body.classList.add('page__body--overlay');
+      overlay.classList.remove('visually-hidden');
+      overlay.classList.add('page__overlay');
     }
   });
+};
+
+
+// Закрытие popup
+const hideModalBooking = () => {
+  window.scrollTo(0, scroll);
+  modalBooking.classList.remove('open');
+  body.classList.remove('page__body--overlay');
+  overlay.classList.remove('page__overlay');
+  overlay.classList.add('visually-hidden');
+  document.removeEventListener('keydown', hideModalBookingESC);
+  modalBookingClose.removeEventListener('click', hideModalBooking);
+  modalBooking.removeEventListener('click', hideModalBookingClickPast);
+};
+
+// Закрытие popup клавишей ESC
+const hideModalBookingESC = (evt) => {
+  if (evt.which === 27) {
+    window.scrollTo(0, scroll);
+    modalBooking.classList.remove('open');
+    body.classList.remove('page__body--overlay');
+    overlay.classList.remove('page__overlay');
+    overlay.classList.add('visually-hidden');
+    document.removeEventListener('keydown', hideModalBookingESC);
+    modalBookingClose.removeEventListener('click', hideModalBooking);
+    modalBooking.removeEventListener('click', hideModalBookingClickPast);
+  }
+};
+
+// Закрытие popup кликом мыши в произвольной области
+const hideModalBookingClickPast = (evt) => {
+  if (!evt.target.closest('.popup-booking__wrapper')) {
+    window.scrollTo(0, scroll);
+    modalBooking.classList.remove('open');
+    body.classList.remove('page__body--overlay');
+    overlay.classList.remove('page__overlay');
+    overlay.classList.add('visually-hidden');
+  }
 };
 
 
@@ -81,7 +97,7 @@ function manageModalBooking(cruise) {
 
   cruise.onfocus = function () {
     cruise.classList.add('cruise--active');
-    button.classList.add('a--active');
+    button.classList.add('a--focus');
     document.addEventListener('keydown', hideModalBookingKey);
     document.addEventListener('keydown', hideModalBookingESC);
     modalBookingClose.addEventListener('click', hideModalBooking);

@@ -4,7 +4,8 @@
   min-height: 555px;
   padding: 0;
   margin: 0;
-  margin-bottom: 110px;
+  margin-bottom: 120px;
+  box-sizing: border-box;
 
   @media (max-width: $tablet-width) {
     min-height: 805px;
@@ -13,44 +14,64 @@
 
   @media (max-width: $mobile-width) {
     min-height: 760px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
   }
 }
 
 .booking__image {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -1;
   width: 100%;
-  min-height: 100%;
-  padding: 0;
-  margin: 0;
+  height: 100%;
+  background-color: #b3cbde;
+  overflow: hidden;
+
+  @media (max-width: $tablet-width) {
+    height: 805px;
+  }
+
+  @media (max-width: $mobile-width) {
+    height: 760px;
+  }
 }
 
 .booking__image img {
   width: 100%;
-  min-height: auto;
-  padding: 0;
-  margin: 0;
+  height: 100%;
+  object-fit: cover;
+
+  @media (max-width: $mobile-width) {
+    background-color: #9fb7ca;
+  }
 }
 
 .booking__container {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: calc(50% - 520px);
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   max-width: 1160px;
   width: 76%;
   min-width: 1040px;
-  padding: 0;
-  padding-top: 50px;
+  height: auto;
+  max-height: 100%;
+  padding: 50px 0;
   box-sizing: border-box;
+
+  @media (max-width: $small-desktop-width) {
+    padding: 50px 20px;
+  }
 
   @media (max-width: $tablet-width) {
     left: 23%;
     flex-direction: column;
     width: 55%;
     min-width: 419px;
+    padding: 0;
     padding-top: 85px;
+    padding-bottom: 50px;
   }
 
   @media (max-width: $mobile-width) {
@@ -63,23 +84,21 @@
 }
 
 .booking__description {
+  z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
   width: 48%;
   min-width: 493px;
   padding: 0;
-  padding-top: 160px;
+  padding-top: 165px;
   margin: 0;
 
   @media (max-width: $tablet-width) {
-    gap: 8px;
     padding-top: 0;
     margin-bottom: 50px;
   }
 
   @media (max-width: $mobile-width) {
-    gap: 14px;
     width: 89%;
     min-width: 257px;
     margin-bottom: 35px;
@@ -87,18 +106,22 @@
 }
 
 .booking__description h2 {
+  z-index: 1;
   padding: 0;
   margin: 0;
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
 
   @media (max-width: $tablet-width) {
+    margin-bottom: 8px;
     font-size: 34px;
     line-height: 51px;
   }
 
   @media (max-width: $mobile-width) {
+    margin-bottom: 14px;
     text-align: center;
     font-size: 24px;
     line-height: 31px;
@@ -106,6 +129,7 @@
 }
 
 .booking__description p {
+  z-index: 1;
   width: 71%;
   padding: 0;
   margin: 0;

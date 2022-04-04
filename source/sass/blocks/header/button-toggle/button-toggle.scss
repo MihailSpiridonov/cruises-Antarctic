@@ -2,6 +2,10 @@
   display: none;
 
   @media (max-width: $mobile-width) {
+    position: absolute;
+    content: "";
+    top: 17px;
+    right: 1%;
     z-index: 3;
     display: block;
     width: 30px;
@@ -31,15 +35,18 @@
 
 .header--open .button-toggle {
   @media (max-width: $mobile-width) {
-    position: absolute;
-    content: "";
-    top: 17px;
-    right: 1%;
     width: 20px;
-    height: 30px;
     padding-bottom: 10px;
+    margin-top: 13px;
     margin-right: 13px;
-    cursor: pointer;
+  }
+}
+
+.header--close .button-toggle {
+  @media (max-width: $mobile-width) {
+    width: 30px;
+    padding-bottom: 10px;
+    margin-right: 11px;
   }
 }
 

@@ -6,13 +6,14 @@
   color: $text-dark-blue;
 
   @media (max-width: $tablet-width) {
-    padding-top: 68px;
+    padding-top: 72px;
     width: 48%;
   }
 
   @media (max-width: $mobile-width) {
     padding-top: 0;
-    width: 95%;
+    margin-bottom: 35px;
+    width: 100%;
   }
 }
 
@@ -52,7 +53,7 @@
   margin-bottom: 18px;
 
   @media (max-width: $tablet-width) {
-    width: 80%;
+    width: 90%;
     margin-bottom: 20px;
   }
 
