@@ -1504,6 +1504,10 @@ tbody {
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
+  color: #011c40;
+  background-color: #f9fbfd;
+  -webkit-box-shadow: none;
+  box-shadow: none;
   border-radius: 0;
   border: none;
   cursor: pointer;
