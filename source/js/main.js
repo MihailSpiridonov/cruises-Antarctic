@@ -1,6 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {buttonHumburger, menuNav, openMenu, openMenuKey, closeMenuKey} from './modules/menu-mobile/menu-mobile.js';
+import {buttonHumburger, menuNav, openMenu, openMenuKey} from './modules/menu-mobile/menu-mobile.js';
 import {form, formSend} from './modules/form-validation/form-validation.js';
 import {cruises, manageModalBooking} from './modules/ModalBooking/ModalBooking.js';
 
@@ -26,7 +26,6 @@ window.addEventListener('DOMContentLoaded', () => {
   buttonHumburger.classList.add('button-toggle--close');
   buttonHumburger.addEventListener('click', openMenu);
   document.addEventListener('keydown', openMenuKey);
-  document.addEventListener('keydown', closeMenuKey);
 
 
   // Form validation

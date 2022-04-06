@@ -13,9 +13,10 @@ function showMenu() {
   buttonHumburger.classList.remove('button-toggle--close');
   buttonHumburger.classList.add('button-toggle--open');
   body.classList.add('page__body--overlay');
+  nav.classList.add('nav--overlay');
+  body.classList.add('page__body--overlay');
   overlay.classList.remove('visually-hidden');
   overlay.classList.add('page__overlay');
-  nav.classList.add('nav--overlay');
 }
 
 // Функция скрытия мобильного меню
@@ -27,8 +28,16 @@ function hideMenu() {
   body.classList.remove('page__body--overlay');
   overlay.classList.remove('page__overlay');
   overlay.classList.add('visually-hidden');
+
   document.body.style.overflow = '';
 }
+
+// Закрытие мобильного меню кликом мыши в произвольной области
+const hideMenuClickPast = (evt) => {
+  if (!evt.target.closest('.header')) {
+    hideMenu();
+  }
+};
 
 // Функция управления мобильным меню
 const openMenu = () => {
@@ -36,6 +45,7 @@ const openMenu = () => {
     showMenu();
     for (let i = 0; i < menuLink.length; i++) {
       menuLink[i].addEventListener('click', hideMenu);
+      document.addEventListener('click', hideMenuClickPast);
     }
   } else {
     hideMenu();
@@ -52,19 +62,14 @@ buttonHumburger.onblur = function () {
   buttonHumburger.classList.remove('button-toggle--focus');
 };
 
-// Функция открывания мобильного меню с клавиатуры
+// Функция открывания/закрывания мобильного меню с клавиатуры
 const openMenuKey = (evt) => {
   if (evt.which === 32 && menuNav.classList.contains('header--close') && buttonHumburger.classList.contains('button-toggle--focus') || evt.which === 13 && menuNav.classList.contains('header--close') && buttonHumburger.classList.contains('button-toggle--focus')) {
     showMenu();
     for (let i = 0; i < menuLink.length; i++) {
       menuLink[i].addEventListener('click', hideMenu);
     }
-  }
-};
-
-// Функция закрывания мобильного меню с клавиатуры
-const closeMenuKey = (evt) => {
-  if (evt.which === 27 && menuNav.classList.contains('header--open')) {
+  } else if (evt.which === 27 && menuNav.classList.contains('header--open')) {
     hideMenu();
     for (let i = 0; i < menuLink.length; i++) {
       menuLink[i].addEventListener('click', hideMenu);
@@ -72,4 +77,5 @@ const closeMenuKey = (evt) => {
   }
 };
 
-export {buttonHumburger, menuNav, body, overlay, openMenu, openMenuKey, closeMenuKey};
+
+export {buttonHumburger, menuNav, body, overlay, openMenu, openMenuKey};
